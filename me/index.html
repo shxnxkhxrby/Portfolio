@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shane Kherby Sahagun - Offensive Security</title>
-    <link rel="icon" type="image/png" href="kali1.png">
+    <link rel="icon" type="image/png" href="kali.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -22,9 +22,13 @@
     <!-- Main Content -->
     <div id="main-content" style="display: none;">
         <!-- Navigation -->
-        <nav class="fixed top-0 w-full bg-black bg-opacity-90 border-b border-green-500 z-50 backdrop-blur-sm">
+        <nav class="fixed top-0 w-full bg-black bg-opacity-80 border-b border-green-500 z-50 backdrop-blur-sm">
             <div class="container mx-auto px-6 py-4">
-                <div class="flex justify-center items-center">
+                <div class="flex justify-between md:justify-center items-center">
+                    <!-- Mobile Logo - Only visible on mobile -->
+                    <div class="md:hidden text-xl font-bold orbitron glitch text-green-500">&lt;sn1pp3t&gt;</div>
+                    
+                    <!-- Desktop Menu -->
                     <div class="hidden md:flex items-center space-x-8">
                         <a href="#home" class="nav-link-kali">HOME</a>
                         <a href="#about" class="nav-link-kali">ABOUT</a>
@@ -34,16 +38,24 @@
                         <a href="#resume" class="nav-link-kali">RESUME</a>
                         <a href="#contact" class="nav-link-kali">CONTACT</a>
                     </div>
-                    <button id="mobile-menu-btn" class="md:hidden text-2xl">☰</button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-2xl text-green-500 hover:text-green-400 transition-colors z-50">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-                <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-                    <a href="#home" class="block hover:text-green-400">HOME</a>
-                    <a href="#about" class="block hover:text-green-400">ABOUT</a>
-                    <a href="#skills" class="block hover:text-green-400">SKILLS</a>
-                    <a href="#projects" class="block hover:text-green-400">PROJECTS</a>
-                    <a href="#certificates" class="block hover:text-green-400">CERTIFICATES</a>
-                    <a href="#resume" class="block hover:text-green-400">RESUME</a>
-                    <a href="#contact" class="block hover:text-green-400">CONTACT</a>
+                
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="mobile-menu md:hidden">
+                    <div class="mobile-menu-content">
+                        <a href="#home" class="mobile-menu-link">HOME</a>
+                        <a href="#about" class="mobile-menu-link">ABOUT</a>
+                        <a href="#skills" class="mobile-menu-link">SKILLS</a>
+                        <a href="#projects" class="mobile-menu-link">PROJECTS</a>
+                        <a href="#certificates" class="mobile-menu-link">CERTIFICATES</a>
+                        <a href="#resume" class="mobile-menu-link">RESUME</a>
+                        <a href="#contact" class="mobile-menu-link">CONTACT</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -257,7 +269,7 @@
                     <!-- Project 1 -->
                     <div class="project-card p-6 rounded-lg">
                         <img src="project1.jpg" alt="Network Scanner Screenshot" class="project-img">
-                        <div class="text-3xl mb-4">🔐</div>
+                        <div class="text-3xl mb-4">🔍</div>
                         <div class="text-xs text-green-400 mb-2">// WIRELESS_TOOL</div>
                         <h3 class="text-xl font-bold mb-3">Wireless Sniffer</h3>
                         <p class="mb-4 leading-relaxed">
@@ -322,11 +334,11 @@
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
                             <img src="certificate1.png" alt="CompTIA+ PenTest Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
-                        <div class="flex items-start gap-6">
+                        <div class="flex flex-col md:flex-row items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
                                 🏆
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 w-full">
                                 <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
                                 <h3 class="text-xl font-bold mb-3">CompTIA+ PenTest</h3>
                                 <p class="text-green-400 mb-3">Issued: 2025</p>
@@ -340,11 +352,11 @@
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
                             <img src="certificate2.png" alt="Offensive Pentesting Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
-                        <div class="flex items-start gap-6">
+                        <div class="flex flex-col md:flex-row items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
                                 🏆
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 w-full">
                                 <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
                                 <h3 class="text-xl font-bold mb-3">Offensive Pentesting</h3>
                                 <p class="text-green-400 mb-3">Issued: 2025</p>
@@ -358,11 +370,11 @@
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
                             <img src="certificate3.png" alt="Jr Penetration Tester Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
-                        <div class="flex items-start gap-6">
+                        <div class="flex flex-col md:flex-row items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
                                 🏆
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 w-full">
                                 <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
                                 <h3 class="text-xl font-bold mb-3">Jr Penetration Tester</h3>
                                 <p class="text-green-400 mb-3">Issued: 2025</p>
@@ -376,11 +388,11 @@
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
                             <img src="certificate4.png" alt="Web Fundamentals Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
-                        <div class="flex items-start gap-6">
+                        <div class="flex flex-col md:flex-row items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
                                 🏆
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 w-full">
                                 <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
                                 <h3 class="text-xl font-bold mb-3">Web Fundamentals</h3>
                                 <p class="text-green-400 mb-3">Issued: 2025</p>
@@ -390,17 +402,17 @@
                     </div>
                 </div>
 
-                <!-- Certificate 5 - Centered -->
+                <!-- Certificate 5 -->
                 <div class="flex justify-center">
                     <div class="cert-card p-10 rounded-lg max-w-xl w-full">
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
                             <img src="certificate5.png" alt="Pre Security Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
-                        <div class="flex items-start gap-6">
+                        <div class="flex flex-col md:flex-row items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
                                 🏆
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 w-full">
                                 <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
                                 <h3 class="text-xl font-bold mb-3">Pre Security</h3>
                                 <p class="text-green-400 mb-3">Issued: 2025</p>
@@ -509,10 +521,11 @@
         </section>
 
         <!-- Footer -->
-        <footer class="border-t border-green-500 py-8 px-6 text-center">
+        <footer class="border-t border-green-500 py-8 px-6 text-center bg-black bg-opacity-80 backdrop-blur-sm">
             <p>© 2025 Shane Kherby Sahagun. All rights reserved.</p>
             <p class="text-xs mt-2 text-green-400">// Built with HTML, Tailwind CSS & Vanilla JS</p>
             <p class="text-xs mt-1 text-green-400">// Offensive Security • Ethical Hacking • Penetration Testing</p>
+            <p class="text-xs mt-2 text-green-300">// LulzSec Animation Video by Fern</p>
             <div class="mt-4">
                 <a href="https://github.com/shxnxkhxrby/Portfolio" target="_blank" class="text-green-400 hover:text-green-300">
                     → View Source Code on GitHub
