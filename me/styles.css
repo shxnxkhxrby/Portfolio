@@ -137,6 +137,40 @@ nav::after {
     color: #0f0;
 }
 
+/* Mobile Menu Slide Animation */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.active {
+    max-height: 500px;
+}
+
+.mobile-menu-content {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.mobile-menu-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #0f0;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.mobile-menu-link:hover {
+    color: #00ff00;
+    background-color: rgba(0, 255, 0, 0.1);
+    border-left-color: #0f0;
+    padding-left: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
 /* Project Cards */
 .project-card {
     border: 1px solid rgba(0, 255, 0, 0.3);
