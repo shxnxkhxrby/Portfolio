@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane Kherby Sahagun - Offensive Security</title>
+    <link rel="icon" type="image/png" href="kali1.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+
+    <!-- Video Intro Screen -->
+    <div id="video-screen">
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="robot1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+        <!-- Navigation -->
+        <nav class="fixed top-0 w-full bg-black bg-opacity-80 border-b border-green-500 z-50 backdrop-blur-sm">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex justify-between md:justify-center items-center">
+                    <!-- Mobile Logo - Only visible on mobile -->
+                    <div class="md:hidden text-xl font-bold orbitron glitch text-green-500">&lt;sn1pp3t&gt;</div>
+                    
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="nav-link-kali">HOME</a>
+                        <a href="#about" class="nav-link-kali">ABOUT</a>
+                        <a href="#skills" class="nav-link-kali">SKILLS</a>
+                        <a href="#projects" class="nav-link-kali">PROJECTS</a>
+                        <a href="#certificates" class="nav-link-kali">CERTIFICATES</a>
+                        <a href="#resume" class="nav-link-kali">RESUME</a>
+                        <a href="#contact" class="nav-link-kali">CONTACT</a>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-2xl text-green-500 hover:text-green-400 transition-colors z-50">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="mobile-menu md:hidden">
+                    <div class="mobile-menu-content">
+                        <a href="#home" class="mobile-menu-link">HOME</a>
+                        <a href="#about" class="mobile-menu-link">ABOUT</a>
+                        <a href="#skills" class="mobile-menu-link">SKILLS</a>
+                        <a href="#projects" class="mobile-menu-link">PROJECTS</a>
+                        <a href="#certificates" class="mobile-menu-link">CERTIFICATES</a>
+                        <a href="#resume" class="mobile-menu-link">RESUME</a>
+                        <a href="#contact" class="mobile-menu-link">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
+            <div class="text-center space-y-6">
+                <div class="glitch-wrapper w-40 h-40 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden relative">
+                    <img src="dp.png" alt="Profile" class="glitch-img w-full h-full object-cover">
+                    <div class="tv-static"></div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold orbitron glitch">Shane Kherby Sahagun</h1>
+                <p class="text-xl md:text-2xl text-green-400">&lt; Offensive Security Enthusiast /&gt;</p>
+                <p class="text-base md:text-lg text-green-300 mt-2">Ethical Hacker | Aspiring Penetration Tester</p>
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <a href="#contact" class="px-6 py-3 border-2 border-green-500 hover:bg-green-500 hover:text-black transition-all">CONTACT ME</a>
+                    <a href="#projects" class="px-6 py-3 bg-green-500 text-black hover:bg-green-400 transition-all">VIEW PROJECTS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="min-h-screen py-20 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-5xl font-bold orbitron mb-12 border-b-2 border-green-500 pb-4">
+                    <span class="text-green-400">&gt;</span> ABOUT_ME
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="border border-green-500 p-6 bg-black bg-opacity-50">
+                        <h3 class="text-2xl font-bold mb-4 text-green-400">// EDUCATION</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-green-400 mb-1">▸ Elementary</p>
+                                <p>San Ildefonso Learning Center</p>
+                            </div>
+                            <div>
+                                <p class="text-green-400 mb-1">▸ Junior & Senior High School</p>
+                                <p>Guiguinto National Vocational High School</p>
+                            </div>
+                            <div>
+                                <p class="text-green-400 mb-1">▸ College - BSIT</p>
+                                <p>College of Our Lady of Mercy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-green-500 p-6 bg-black bg-opacity-50">
+                        <h3 class="text-2xl font-bold mb-4 text-green-400">// BIO</h3>
+                        <p class="leading-relaxed">
+                            Offensive security enthusiast with a passion for ethical hacking and penetration testing. 
+                            Specializing in network security, vulnerability assessment, and exploitation techniques. 
+                            Continuously learning and practicing on platforms like TryHackMe to sharpen offensive security skills.
+                            Dedicated to securing systems by thinking like an attacker.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hobbies Section -->
+                <div class="border border-green-500 p-6 bg-black bg-opacity-50">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">// HOBBIES & INTERESTS</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div>
+                            <div class="hobby-icon">🎮</div>
+                            <p>Gaming</p>
+                        </div>
+                        <div>
+                            <div class="hobby-icon">💻</div>
+                            <p>Coding</p>
+                        </div>
+                        <div>
+                            <div class="hobby-icon">🚩</div>
+                            <p>CTF Challenges</p>
+                        </div>
+                        <div>
+                            <div class="hobby-icon">📚</div>
+                            <p>Tech Reading</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="min-h-screen py-20 px-6 bg-black bg-opacity-30">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-5xl font-bold orbitron mb-12 border-b-2 border-green-500 pb-4">
+                    <span class="text-green-400">&gt;</span> SKILLS
+                </h2>
+                
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">// CORE_COMPETENCIES</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Social Engineering</span>
+                                <span class="text-green-400">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="100"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Prompt Engineering</span>
+                                <span class="text-green-400">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="100"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Ethical Hacking & Penetration Testing</span>
+                                <span class="text-green-400">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Networking & Infrastructure</span>
+                                <span class="text-green-400">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Bash Scripting</span>
+                                <span class="text-green-400">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Python Programming</span>
+                                <span class="text-green-400">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Web Development (App & Web)</span>
+                                <span class="text-green-400">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linux Distros -->
+                <div class="mb-20">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">// LINUX_EXPERTISE</h3>
+                    <p class="mb-6">Configured and mastered multiple Linux distributions for security operations:</p>
+
+                    <div class="flex flex-wrap gap-8 justify-center md:justify-start">
+
+                        <!-- Kali Linux -->
+                        <a href="https://www.kali.org/" target="_blank" class="os-logo rounded-lg flex flex-col items-center">
+                            <img src="kali.png" class="w-16 h-16 object-contain" alt="Kali Linux">
+                            <span class="text-sm mt-2">Kali</span>
+                        </a>
+
+                        <!-- Parrot OS -->
+                        <a href="https://parrotsec.org/" target="_blank" class="os-logo rounded-lg flex flex-col items-center">
+                            <img src="parrot.png" class="w-16 h-16 object-contain" alt="Parrot OS">
+                            <span class="text-sm mt-2">Parrot</span>
+                        </a>
+
+                        <!-- Arch Linux -->
+                        <a href="https://archlinux.org/" target="_blank" class="os-logo rounded-lg flex flex-col items-center">
+                            <img src="arch.png" class="w-16 h-16 object-contain" alt="Arch Linux">
+                            <span class="text-sm mt-2">Arch</span>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- Platforms -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">// TRAINING_PLATFORMS</h3>
+                    <a href="https://tryhackme.com/p/sn1ppet" target="_blank" class="border border-green-500 p-6 bg-black bg-opacity-50 inline-block hover:border-green-400 hover:shadow-lg hover:shadow-green-500/50 transition-all">
+                        <div class="flex items-center gap-4">
+                            <div class="text-4xl">🎯</div>
+                            <div>
+                                <p class="font-bold text-lg">TryHackMe</p>
+                                <p class="text-green-400">Active Security Researcher</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="min-h-screen py-20 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-5xl font-bold orbitron mb-12 border-b-2 border-green-500 pb-4">
+                    <span class="text-green-400">&gt;</span> PROJECTS
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <!-- Project 1 -->
+                    <div class="project-card p-6 rounded-lg">
+                        <img src="project1.jpg" alt="Network Scanner Screenshot" class="project-img">
+                        <div class="text-3xl mb-4">🔍</div>
+                        <div class="text-xs text-green-400 mb-2">// WIRELESS_TOOL</div>
+                        <h3 class="text-xl font-bold mb-3">Wireless Sniffer</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Custom Wired Marauder scanning tool for wireless pentesting. 
+                            Features wifi, bluetooth, sniffing, attacks, etc.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs border border-green-500 px-2 py-1">ESP-32</span>
+                            <span class="text-xs border border-green-500 px-2 py-1">Marauder Firmware</span>
+                            <span class="text-xs border border-green-500 px-2 py-1">Wireless</span>
+                        </div>
+                        <a href="https://www.facebook.com/shane.sahagun.493460/posts/pfbid02Fg5w4fBYF2iudpaj5EYxzADbyvjL5nyM2fsEaNqC6pwrNPKNGr1ZXhcWK6DvFfKkl" target="_blank" class="text-green-400 hover:text-green-300">View on Facebook →</a>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card p-6 rounded-lg">
+                        <img src="project2.png" alt="Bash Automation Screenshot" class="project-img">
+                        <div class="text-3xl mb-4">🛡️</div>
+                        <div class="text-xs text-green-400 mb-2">// AUTOMATION</div>
+                        <h3 class="text-xl font-bold mb-3">TOR Service</h3>
+                        <p class="mb-4 leading-relaxed">
+                            Tor service enabler with IP rotate, proxychains, firefox with tor proxy, etc.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs border border-green-500 px-2 py-1">Bash</span>
+                            <span class="text-xs border border-green-500 px-2 py-1">Linux</span>
+                            <span class="text-xs border border-green-500 px-2 py-1">Automation</span>
+                        </div>
+                        <a href="https://github.com/shxnxkhxrby/Automated-tor-service-starter" target="_blank" class="text-green-400 hover:text-green-300">View on GitHub →</a>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card p-6 rounded-lg">
+                        <img src="project3.png" alt="Security Dashboard Screenshot" class="project-img">
+                        <div class="text-3xl mb-4">🌐</div>
+                        <div class="text-xs text-green-400 mb-2">// WEB_APPLICATION</div>
+                        <h3 class="text-xl font-bold mb-3">Servify</h3>
+                        <p class="mb-4 leading-relaxed">
+                            A Web-Based Platform for Cataloguing Local Laborers in Barangay Sta. Rita, Guiguinto, Bulacan
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs border border-green-500 px-2 py-1">PHP</span>
+                            <span class="text-xs border border-green-500 px-2 py-1">CSS</span>
+                            <span class="text-xs border border-green-500 px-2 py-1">Javascript</span>
+                        </div>
+                        <a href="https://servify.xo.je" target="_blank" class="text-green-400 hover:text-green-300">View on Browser →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="min-h-screen py-24 px-6 bg-black bg-opacity-30">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl md:text-5xl font-bold orbitron mb-16 border-b-2 border-green-500 pb-4">
+                    <span class="text-green-400">&gt;</span> CERTIFICATES
+                </h2>
+                <div class="grid md:grid-cols-2 gap-14 mb-14">
+
+                    <!-- Certificate 1 -->
+                    <div class="cert-card p-10 rounded-lg">
+                        <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
+                            <img src="certificate1.png" alt="CompTIA+ PenTest Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col md:flex-row items-start gap-6">
+                            <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
+                                🏆
+                            </div>
+                            <div class="flex-1 w-full">
+                                <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
+                                <h3 class="text-xl font-bold mb-3">CompTIA+ PenTest</h3>
+                                <p class="text-green-400 mb-3">Issued: 2025</p>
+                                <p class="leading-relaxed">Completed training aligned with the CompTIA PenTest+ exam, focusing on vulnerability management, exploitation, and reporting.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="cert-card p-10 rounded-lg">
+                        <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
+                            <img src="certificate2.png" alt="Offensive Pentesting Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col md:flex-row items-start gap-6">
+                            <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
+                                🏆
+                            </div>
+                            <div class="flex-1 w-full">
+                                <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
+                                <h3 class="text-xl font-bold mb-3">Offensive Pentesting</h3>
+                                <p class="text-green-400 mb-3">Issued: 2025</p>
+                                <p class="leading-relaxed">Advanced training involving real-world exploitation, privilege escalation, and adversarial attack simulations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3 -->
+                    <div class="cert-card p-10 rounded-lg">
+                        <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
+                            <img src="certificate3.png" alt="Jr Penetration Tester Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col md:flex-row items-start gap-6">
+                            <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
+                                🏆
+                            </div>
+                            <div class="flex-1 w-full">
+                                <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
+                                <h3 class="text-xl font-bold mb-3">Jr Penetration Tester</h3>
+                                <p class="text-green-400 mb-3">Issued: 2025</p>
+                                <p class="leading-relaxed">Gained comprehensive knowledge in enumeration, exploitation, reporting, and common penetration testing workflows.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4 -->
+                    <div class="cert-card p-10 rounded-lg">
+                        <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
+                            <img src="certificate4.png" alt="Web Fundamentals Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col md:flex-row items-start gap-6">
+                            <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
+                                🏆
+                            </div>
+                            <div class="flex-1 w-full">
+                                <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
+                                <h3 class="text-xl font-bold mb-3">Web Fundamentals</h3>
+                                <p class="text-green-400 mb-3">Issued: 2025</p>
+                                <p class="leading-relaxed">Learned core web technologies including DNS, HTTP, web architecture, servers, and foundational security concepts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 5 -->
+                <div class="flex justify-center">
+                    <div class="cert-card p-10 rounded-lg max-w-xl w-full">
+                        <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
+                            <img src="certificate5.png" alt="Pre Security Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col md:flex-row items-start gap-6">
+                            <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
+                                🏆
+                            </div>
+                            <div class="flex-1 w-full">
+                                <div class="text-xs text-green-400 mb-2">// TRYHACKME</div>
+                                <h3 class="text-xl font-bold mb-3">Pre Security</h3>
+                                <p class="text-green-400 mb-3">Issued: 2025</p>
+                                <p class="leading-relaxed">Completed foundational cybersecurity learning including networking, Linux basics, and core security principles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="min-h-screen py-20 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-5xl font-bold orbitron mb-12 border-b-2 border-green-500 pb-4">
+                    <span class="text-green-400">&gt;</span> RESUME
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Resume Preview - Takes 2 columns -->
+                    <div class="md:col-span-2 border-2 border-green-500 p-8 bg-black bg-opacity-50 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-green-400">// RESUME_PREVIEW</h3>
+                        <div class="mb-8 border-2 border-green-500 p-4 bg-gray-900 rounded-lg">
+                            <img src="resume.png" alt="Resume Preview" class="w-full h-auto">
+                        </div>
+                        <div class="text-center">
+                            <a href="resume.pdf" download class="px-8 py-4 bg-green-500 text-black font-bold text-lg hover:bg-green-400 transition-all inline-block rounded">
+                                📥 DOWNLOAD RESUME (PDF)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Summary - Takes 1 column -->
+                    <div class="space-y-6">
+                        <div class="border border-green-500 p-6 bg-black bg-opacity-50 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-green-400">// KEY_ACHIEVEMENTS</h3>
+                            <ul class="space-y-3">
+                                <li>→ Ranked Top 3% on TryHackMe platform</li>
+                                <li>→ Completed 5 professional certifications</li>
+                                <li>→ Completed 150+ rooms</li>
+                                <li>→ Active CTF participant</li>
+                            </ul>
+                        </div>
+
+                        <div class="border border-green-500 p-6 bg-black bg-opacity-50 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-green-400">// SUMMARY</h3>
+                            <p class="leading-relaxed">
+                                BSIT student specializing in cybersecurity with hands-on experience in penetration testing, 
+                                vulnerability assessment, and security tool development. Passionate about ethical hacking 
+                                and committed to continuous learning in offensive security practices.
+                            </p>
+                        </div>
+
+                        <div class="border border-green-500 p-6 bg-black bg-opacity-50 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-green-400">// EXPERTISE</h3>
+                            <ul class="space-y-2">
+                                <li>• Penetration Testing</li>
+                                <li>• Network Security</li>
+                                <li>• Vulnerability Assessment</li>
+                                <li>• Social Engineering</li>
+                                <li>• Linux Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen py-20 px-6 bg-black bg-opacity-30">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl md:text-5xl font-bold orbitron mb-12 border-b-2 border-green-500 pb-4">
+                    <span class="text-green-400">&gt;</span> CONTACT
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="border border-green-500 p-6 bg-black bg-opacity-50 rounded-lg">
+                            <h3 class="text-2xl font-bold mb-4 text-green-400">// GET_IN_TOUCH</h3>
+                            <div class="space-y-3 text-lg">
+                                <p><span class="text-green-400">Email:</span> shanekherby2828@gmail.com</p>
+                                <p><span class="text-green-400">Phone:</span> +63 916 314 8584</p>
+                                <p><span class="text-green-400">Location:</span> Sta Rita Guiguinto Bulacan, Philippines</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-green-500 p-6 bg-black bg-opacity-50 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-green-400">// SOCIAL_LINKS</h3>
+                        <div class="flex justify-around items-center py-4">
+                            <a href="https://github.com/shxnxkhxrby" target="_blank" class="social-icon" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/shane-kherby-sahagun-279ab636a/" target="_blank" class="social-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://tryhackme.com/p/sn1ppet" target="_blank" class="social-icon" title="TryHackMe">
+                                <i class="fas fa-shield-alt"></i>
+                            </a>
+                            <a href="https://www.facebook.com/shane.sahagun.493460" target="_blank" class="social-icon" title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-green-500 py-8 px-6 text-center bg-black bg-opacity-80 backdrop-blur-sm">
+            <p>© 2025 Shane Kherby Sahagun. All rights reserved.</p>
+            <p class="text-xs mt-2 text-green-400">// Built with HTML, Tailwind CSS & Vanilla JS</p>
+            <p class="text-xs mt-1 text-green-400">// Offensive Security • Ethical Hacking • Penetration Testing</p>
+            <p class="text-xs mt-2 text-green-300">// LulzSec Animation Video by Fern</p>
+            <div class="mt-4">
+                <a href="https://github.com/shxnxkhxrby/Portfolio" target="_blank" class="text-green-400 hover:text-green-300">
+                    → View Source Code on GitHub
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
