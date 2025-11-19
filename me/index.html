@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shane Kherby Sahagun - Offensive Security</title>
+    <link rel="icon" type="image/png" href="kali1.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -23,16 +24,15 @@
         <!-- Navigation -->
         <nav class="fixed top-0 w-full bg-black bg-opacity-90 border-b border-green-500 z-50 backdrop-blur-sm">
             <div class="container mx-auto px-6 py-4">
-                <div class="flex justify-between items-center">
-                    <div class="text-xl md:text-2xl font-bold orbitron glitch">&lt;sn1pp3t&gt;</div>
-                    <div class="hidden md:flex space-x-8">
-                        <a href="#home" class="nav-link hover:text-green-400">HOME</a>
-                        <a href="#about" class="nav-link hover:text-green-400">ABOUT</a>
-                        <a href="#skills" class="nav-link hover:text-green-400">SKILLS</a>
-                        <a href="#projects" class="nav-link hover:text-green-400">PROJECTS</a>
-                        <a href="#certificates" class="nav-link hover:text-green-400">CERTIFICATES</a>
-                        <a href="#resume" class="nav-link hover:text-green-400">RESUME</a>
-                        <a href="#contact" class="nav-link hover:text-green-400">CONTACT</a>
+                <div class="flex justify-center items-center">
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="nav-link-kali">HOME</a>
+                        <a href="#about" class="nav-link-kali">ABOUT</a>
+                        <a href="#skills" class="nav-link-kali">SKILLS</a>
+                        <a href="#projects" class="nav-link-kali">PROJECTS</a>
+                        <a href="#certificates" class="nav-link-kali">CERTIFICATES</a>
+                        <a href="#resume" class="nav-link-kali">RESUME</a>
+                        <a href="#contact" class="nav-link-kali">CONTACT</a>
                     </div>
                     <button id="mobile-menu-btn" class="md:hidden text-2xl">☰</button>
                 </div>
@@ -113,7 +113,7 @@
                             <p>Coding</p>
                         </div>
                         <div>
-                            <div class="hobby-icon">🔐</div>
+                            <div class="hobby-icon">🚩</div>
                             <p>CTF Challenges</p>
                         </div>
                         <div>
@@ -257,7 +257,7 @@
                     <!-- Project 1 -->
                     <div class="project-card p-6 rounded-lg">
                         <img src="project1.jpg" alt="Network Scanner Screenshot" class="project-img">
-                        <div class="text-3xl mb-4">🔒</div>
+                        <div class="text-3xl mb-4">🔐</div>
                         <div class="text-xs text-green-400 mb-2">// WIRELESS_TOOL</div>
                         <h3 class="text-xl font-bold mb-3">Wireless Sniffer</h3>
                         <p class="mb-4 leading-relaxed">
@@ -320,7 +320,7 @@
                     <!-- Certificate 1 -->
                     <div class="cert-card p-10 rounded-lg">
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
-                            <img src="certificate1.png" alt="CompTIA+ PenTest Certificate" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-300">
+                            <img src="certificate1.png" alt="CompTIA+ PenTest Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="flex items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
@@ -338,7 +338,7 @@
                     <!-- Certificate 2 -->
                     <div class="cert-card p-10 rounded-lg">
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
-                            <img src="certificate2.png" alt="Offensive Pentesting Certificate" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-300">
+                            <img src="certificate2.png" alt="Offensive Pentesting Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="flex items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
@@ -356,7 +356,7 @@
                     <!-- Certificate 3 -->
                     <div class="cert-card p-10 rounded-lg">
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
-                            <img src="certificate3.png" alt="Jr Penetration Tester Certificate" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-300">
+                            <img src="certificate3.png" alt="Jr Penetration Tester Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="flex items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
@@ -374,7 +374,7 @@
                     <!-- Certificate 4 -->
                     <div class="cert-card p-10 rounded-lg">
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
-                            <img src="certificate4.png" alt="Web Fundamentals Certificate" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-300">
+                            <img src="certificate4.png" alt="Web Fundamentals Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="flex items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
@@ -394,7 +394,7 @@
                 <div class="flex justify-center">
                     <div class="cert-card p-10 rounded-lg max-w-xl w-full">
                         <div class="mb-8 border-2 border-green-500 rounded-lg overflow-hidden bg-gray-900">
-                            <img src="certificate5.png" alt="Pre Security Certificate" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-300">
+                            <img src="certificate5.png" alt="Pre Security Certificate" class="w-full h-auto object-contain hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="flex items-start gap-6">
                             <div class="w-20 h-20 border-2 border-green-500 rounded flex items-center justify-center text-3xl flex-shrink-0">
